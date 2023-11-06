@@ -1,0 +1,15 @@
+body,html{
+  background-image: url(/images/welcome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.startBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.startBtn>button{
+  position: relative;
+  top: 180px;
+}

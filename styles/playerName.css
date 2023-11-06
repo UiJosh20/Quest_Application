@@ -1,0 +1,5 @@
+body,html{
+  background-image: url(/images/welcome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
