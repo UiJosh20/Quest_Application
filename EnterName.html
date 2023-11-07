@@ -10,7 +10,20 @@
 </head>
 <body>
   <audio src="sounds/Who Wants To Be A Millionaire - Full.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
-  <input type="text" name="" id="" placeholder="Enter your name">
-  <button class="btn btn-success w-100" onclick="createAvatar()">create</button>
+  <main class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center p-lg-5  vh-100">
+      <div class="form-group w-50 p-lg-4 border border-light brder">
+        <input type="text" name="" id="playerName" placeholder="Player Name" class="w-100 my-3 p-2 form-control text-center">
+        <div class="col-lg d-flex gap-3">
+          <input type="text" name="" id="playerCity" placeholder="Player city" class="w-50 my-3 p-2 form-control text-center">
+          <input type="text" name="" id="difficulty" placeholder="Difficulty" class="w-50 my-3 p-2 form-control text-center">
+        </div>
+        
+        <button class="btn btn-success w-100 p-3 fw-bold" onclick="createAvatar()">Continue</button>
+      </div>
+      </div>
+    </div>
+  </main>
+  <script src="scripts/index.js"></script>
 </body>
 </html>

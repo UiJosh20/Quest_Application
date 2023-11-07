@@ -1,0 +1,10 @@
+body{
+  background-image:url(/images/background_1.jpg);
+  background-size: cover;
+}
+
+.brder{
+  box-shadow: 2px 2px 12px 2px  black;
+  border-radius: 24px;
+  background-color: rgba(0, 45, 143, 0.5);
+}
