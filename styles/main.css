@@ -2,3 +2,55 @@ body{
   background-image:url(/images/background_4.jpg);
   background-size: cover;
 }
+
+.brder{
+  box-shadow: 2px 2px 12px 2px  black;
+  border-radius: 14px;
+  background-color: rgba(0, 45, 143, 0.67);
+  border: 1px solid white;
+  height: 320px;
+  width: 200px;
+
+}
+
+.brder1{
+  box-shadow: 2px 2px 12px 2px  black;
+  border-radius: 100%;
+  background-color: rgba(0, 45, 143, 0.67);
+  height: 50px;
+  width: 50px;
+  border: 2px solid goldenrod;
+  /* border: 2px solid white; */
+}
+
+.brder2{
+  box-shadow: 2px 2px 12px 2px  black;
+  border-radius: 24px;
+  background-color: rgba(0, 45, 143, 0.67);
+  width: 400px;
+  border: 2px solid goldenrod;
+
+}
+
+.brder3{
+  box-shadow: 2px 2px 12px 2px  black;
+  border-radius: 24px;
+  background-color: rgba(0, 45, 143, 0.67);
+  width: 170px;
+  border: 2px solid whitesmoke;
+
+}
+.highlight{
+  background-color: goldenrod;
+  padding: 2px;
+  color: white;
+  opacity: 1;
+}
+
+p{
+  padding: 0px 10px;
+  color: grey;
+  opacity: 0.5;
+  font-size: 18px;
+  line-height: 1;
+}
