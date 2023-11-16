@@ -1,15 +1,35 @@
 body,html{
-  background-image: url(/images/welcome.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .startBtn{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/images/welcome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 .startBtn>button{
+ border-radius: 100% !important;
+ height: 100px !important;                                                                                      
+ width: 100px !important; 
+}    
+/* Spinner CSS */
+.spinner {
   position: relative;
-  top: 180px;
+  top: -750px;
+  left: 170px;
+  animation: spin 4s linear infinite;
+
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader{
+  display: none;
 }

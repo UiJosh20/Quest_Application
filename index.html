@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Millivania</title>
-  <link rel="stylesheet" href="styles/welcome.css">
-  <!-- bootstrap css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<!-- animate style -->
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Millivania</title>
+    <link rel="stylesheet" href="styles/welcome.css" />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- animate style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- <audio
+      src="sounds/Who Wants To Be A Millionaire - Full.mp3"
+      id="myAudio"
+      loop="loop"
+      autoplay="autoplay"
+    ></audio> -->
 
-</head>
-<body>
-  <audio src="sounds/Who Wants To Be A Millionaire - Full.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
-<div class="startBtn">
-  <button class="btn btn-success w-25 shadow border border-light border-2 rounded-5 fw-bold animate__animated animate__pulse animate__faster animate__infinite infinite" id="startGame" onclick="startGame()">START</button>
-</div>
+    <div class="startBtn" id="mainpage">
+      <button
+        class="btn btn-success w-25 shadow border border-light border-2 rounded-5 fw-bold animate__animated animate__pulse animate__faster animate__infinite infinite"
+        id="startGameIn"
+        onclick="startGame()"
+      >
+        START
+      </button>
+    </div>
+    <div class="wom">
+      <img src="images/loader.png" id="loader" class="spinner" />
+    </div>
 
-
-
-
-
-
-  <!-- script goes here -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="scripts/index.js"></script>
-</body>
+    <!-- script goes here -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const startGame = () => {
+        const loader = document.getElementById("loader");
+        loader.style.display = "block";
+        startGameIn.style.display = "none";
+        // Delay the page navigation to simulate loading time (you can adjust the timeout as needed)
+        setTimeout(() => {
+          window.location.href = "signin.html";
+        }, 5000); // Adjust the timeout as needed
+      };
+    </script>
+  </body>
 </html>

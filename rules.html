@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game rules</title>
-  <link rel="stylesheet" href="styles/rules.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-  <audio src="sounds/Who Wants To Be A Millionaire - Full.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
-  <div id="displayMe"></div>
-  <script src="scripts/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game rules</title>
+    <link rel="stylesheet" href="styles/rules.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <audio
+      src="sounds/Who Wants To Be A Millionaire - Full.mp3"
+      id="myAudio"
+      loop="loop"
+      autoplay="autoplay"
+    ></audio>
+    <div id="displayMe"></div>
+
+    <script>
+      var gameArray = JSON.parse(localStorage.getItem("playerInfo"));
+
+      const displayAll = () => {
+        console.log(gameArray);
+        displayMe.innerHTML = "";
+        displayMe.innerHTML = `
+  <div class="w-100  d-flex justify-content-center align-items-center vh-100 p-3">
+  <div class="border border-light w-50 p-4 brder h-75">
+  <p class="text-light fw-bold">Welcome to Millivania <b class="text-warning">${gameArray.yourName}</b>, it's time you know the rules of the game</p>
+  <h3 class="textdanger fw-bold">Rules</h3>
+  <ol class="text-white px-4 py-2">
+  <li>Player is to choose one correct option out of all the options on a particular question</li>
+  <li>Player can only walk away from a particular question only after he/she has gotten to a particular prize level</li>
+  <li>Player can choose to call a friend or the audience or 50:50</li>
+  <li>Player is to choose one correct option within 60 seconds</li>
+  <li>Player will only go to the next prize after answering three questions correctly</li>
+  </ol>
+  <button class="btn btnsuccess w-100" onclick="gameOn()">Continue</button>
+  </div>
+  </div>
+  `;
+      };
+
+      displayAll();
+
+      const gameOn = () => {
+        location.href = "main.html";
+      };
+    </script>
+  </body>
 </html>
