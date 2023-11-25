@@ -11,6 +11,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.cdnfonts.com/css/ice-mirror-in-winter-kei"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <audio
@@ -28,10 +32,11 @@
         console.log(gameArray);
         displayMe.innerHTML = "";
         displayMe.innerHTML = `
-  <div class="w-100  d-flex justify-content-center align-items-center vh-100 p-3">
-  <div class="border border-light w-50 p-4 brder h-75">
-  <p class="text-light fw-bold">Welcome to Millivania <b class="text-warning">${gameArray.yourName}</b>, it's time you know the rules of the game</p>
-  <h3 class="textdanger fw-bold">Rules</h3>
+
+        <div class="login-box w-50">
+          <h1 class="textdanger fw-bold">Rules</h1>
+        <form>
+          <h2 class="text-light fw-bold">Welcome to Millivania <b class="text-warning">${gameArray.yourName}</b>, it's time you know the rules of the game</h2>
   <ol class="text-white px-4 py-2">
   <li>Player is to choose one correct option out of all the options on a particular question</li>
   <li>Player can only walk away from a particular question only after he/she has gotten to a particular prize level</li>
@@ -39,9 +44,17 @@
   <li>Player is to choose one correct option within 60 seconds</li>
   <li>Player will only go to the next prize after answering three questions correctly</li>
   </ol>
-  <button class="btn btnsuccess w-100" onclick="gameOn()">Continue</button>
-  </div>
-  </div>
+          <a href="#" onclick="gameOn()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Continue
+          </a>
+        </form>
+      </div>
+
+  
   `;
       };
 

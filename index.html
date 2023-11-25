@@ -36,8 +36,7 @@
       </button>
     </div>
     <div class="wom">
-      <img src="images/loader.png" id="loader" class="spinner" />
-    </div>
+     
 
     <!-- script goes here -->
     <script
@@ -47,13 +46,7 @@
     ></script>
     <script>
       const startGame = () => {
-        const loader = document.getElementById("loader");
-        loader.style.display = "block";
-        startGameIn.style.display = "none";
-        // Delay the page navigation to simulate loading time (you can adjust the timeout as needed)
-        setTimeout(() => {
-          window.location.href = "signin.html";
-        }, 5000); // Adjust the timeout as needed
+        window.location.href = "signin.html";
       };
     </script>
   </body>
