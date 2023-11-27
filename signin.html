@@ -23,21 +23,16 @@
           <form>
             <div class="user-box">
               <input required="" name="" type="text"  id="playerName">
-              <label>Username</label>
-            </div>
-            <div class="user-box">
-              <input required="" name="" type="password" id="passwordUp">
-              <label>Password</label>
+              <label>What is your name?</label>
             </div>
             <a href="#" onclick="createAvatar()">
               <span></span>
               <span></span>
               <span></span>
               <span></span>
-              Sign in
+              Start
             </a>
           </form>
-          <p>Don't have an account? <a href="signUp.html" class="a2">Sign up!</a></p>
         </div>
       </div>
       </div>
@@ -49,14 +44,14 @@
   <script>
     const createAvatar = () => {
   let yourName = playerName.value;
-  let stage = passwordUp.value
-  let avatarObject = {yourName, stage}
+  let avatarObject = {yourName}
 
-  if (yourName == "" || stage == ""){
-    alert("fill the form");
+  if (yourName == ""){
+    alert("Please tell us your name else we won't let you enter");
+  
+    window.location.href = "signin.html"
   }else{
     playerName.value = ""
-    passwordUp.value = ""
     localStorage.setItem("playerInfo", JSON.stringify(avatarObject));
     window.location.href = "rules.html"
   }
