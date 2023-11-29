@@ -19,7 +19,7 @@ h1{
   border-radius: 14px;
   background-color: rgba(0, 45, 143, 0.67);
   border: 1px solid white;
-  height: 100px;
+  height: 50px;
   width: 200px;
   position: relative;
   top: 200px;
@@ -81,4 +81,9 @@ p{
   width: 100px;
   border: 2px solid goldenrod;
   /* border: 2px solid white; */
+}
+
+.questions {
+  width: 100%; /* Set the width of the container */
+  word-wrap: break-word; /* Allow long words to break onto the next line */
 }
