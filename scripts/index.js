@@ -3,9 +3,6 @@ let newSong = new Audio(
   "./sounds/mixkit-auditorium-moderate-applause-and-cheering-502.wav"
 );
 
-// setTimeout(() => {
-//   updateTimer();
-// }, 4000);
 const audio = document.getElementById("myAudio");
 // Set the volume to a lower value
 audio.volume = 0.8;
@@ -141,7 +138,14 @@ const updateReward = (amount) => {
 
   if (correctAnswersCount === 3) {
     // Display congratulations image
-    document.body.innerHTML = `<img src="congratulations_image.jpg" alt="Congratulations" style="width: 100%; height: 100%; object-fit: cover;">`;
+    document.body.innerHTML = `
+    <div class="d-flex justify-content-center">
+    <img src="images/preview.png" alt="Congratulations" style="width: 50%; height: 50%; object-fit: cover;">
+    </div>
+    <h2 class="text-center text-white fw-bold">You just completed level 1</h2>
+    
+    `;
+    newSong.play()
     setVolume(0.6);
 
   }
