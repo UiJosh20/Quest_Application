@@ -187,6 +187,7 @@ if (savedLevel == null){
 
 
 
+
 // Update reward and check for correct answers
 const updateReward = (amount) => {
   reward += amount;
@@ -197,10 +198,10 @@ const updateReward = (amount) => {
 
   if (amount === 200) {
     // Increment count for correct answers
-    correctAnswersCount++; 
+    correctAnswersCount++;
   }
 
-  if (correctAnswersCount === currentLevel * 3) {
+  if (reward >= 500) { // Check if the reward is greater than or equal to $500
     pauseTimer();
     document.getElementById("disappear").style.display = "none";
     currentLevel++;
@@ -221,7 +222,7 @@ const updateReward = (amount) => {
       localStorage.setItem("level", currentLevel);
       location.reload()
       fetchNewQuestion(); // Resume questions and timer immediately after content disappears
-      startTimer()
+      startTimer();
     }, 2500);
   }
 
@@ -233,6 +234,7 @@ const updateReward = (amount) => {
     rewardDiv.style.backgroundColor = "green";
   }
 };
+
 
 
 
@@ -301,6 +303,11 @@ const restartGame = () => {
   fiftyFiftyButton.disabled = false; // Enable the button
   fiftyFiftyButton.style.backgroundColor = ""; // Reset background color
   fiftyFiftyButton.style.opacity = "";
+  audienceUsed = false;
+  const audienceButton = document.getElementById("audienceIt");
+  audienceButton.disabled = false; // Enable the button
+  audienceButton.style.backgroundColor = ""; // Reset background color
+  audienceButton.style.opacity = "";
   fetchNewQuestion();
 };
 
@@ -318,11 +325,22 @@ const startGame = () => {
 
 
 // Assume you have an array of audience percentages (between 0 and 100)
+let audienceUsed = false;
 const audienceData = [Math.random()*100 ,Math.random()*100 ,Math.random()*100, Math.random()*100]; // Example data: 4 options
-
 // Function to create the chart
 function createChart() {
   pauseTimer()
+
+  if (audienceUsed) {
+    return;
+  }
+
+  audienceUsed = true;
+  const audienceButton = document.getElementById("audienceIt");
+  audienceButton.disabled = true; // Disable the button
+  audienceButton.style.backgroundColor = "red"; // Change background color to red
+  audienceButton.style.opacity = "0.5"; // Make the button transparent
+  
   const ctx = document.getElementById('audiencePollChart').getContext('2d');
 
   new Chart(ctx, {
@@ -362,4 +380,6 @@ function createChart() {
     startTimer()
   }, 8000); 
 }
+
+
 
