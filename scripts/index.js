@@ -330,7 +330,7 @@ const audienceData = [Math.random()*100 ,Math.random()*100 ,Math.random()*100, M
 // Function to create the chart
 function createChart() {
   pauseTimer()
-
+  alert("when using the AUDIENCE LIFE LINE you are allowed to study the possibilities and descide your answer within 10 seconds")
   if (audienceUsed) {
     return;
   }
