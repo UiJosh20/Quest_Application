@@ -1,9 +1,10 @@
 body,
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
+  
 }
 .startBtn {
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
     url(/images/welcome.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,10 +12,44 @@ html {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  /* width: 90% !important; */
 }
 .startBtn > button {
   margin-top: 260px;
   border-radius: 20px !important;
   padding: 10px;
   width: 400px !important;
+}
+.loader{
+  display: none;
+}
+@media screen and (max-width: 475px) {
+  .loader{
+    display: block;
+    position: relative;
+    top: -100px !important;
+  }
+
+  .startBtn {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: 100vh; */
+    /* width: 90% !important; */
+  }
+
+  .pullUP{
+    position: relative;
+    bottom: 400px !important;
+    width: 100% !important;
+  }
+
+  .startBtn > button {
+    margin-top: 0px !important;
+    border-radius: 20px !important;
+    padding: 10px;
+    width: 400px !important;
+  }
 }

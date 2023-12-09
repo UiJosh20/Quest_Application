@@ -101,6 +101,12 @@ p {
 }
 
 @media screen and (max-width: 475px) {
+  body {
+    background-image: url(/images/background_4.jpg);
+    background-size: cover !important;
+    /* background-repeat: no-repeat; */
+    height: 100vh;
+  }
   h1 {
     font-family: "Ice Mirror in Winter Kei", sans-serif;
     color: white !important;
@@ -156,7 +162,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 200px;
+    top: 180px;
+    left: 160px;
     box-shadow: 2px 2px 12px 2px black;
     border-radius: 100%;
     background-color: rgba(0, 45, 143, 0.67);
