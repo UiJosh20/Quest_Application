@@ -119,7 +119,7 @@ p {
  .hide1{
   display: flex !important;
   flex-direction: column !important;
-  margin-top: -100px !important;
+  margin-top: -56px !important;
  }
 
   #answerQuiz{
@@ -153,12 +153,15 @@ p {
   }
   .brder4 {
     position: absolute;
-    top: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
     box-shadow: 2px 2px 12px 2px black;
     border-radius: 100%;
     background-color: rgba(0, 45, 143, 0.67);
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     border: 2px solid goldenrod;
     /* border: 2px solid white; */
   }
