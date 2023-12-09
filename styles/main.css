@@ -99,3 +99,67 @@ p {
   height: 200px !important;
   
 }
+
+@media screen and (max-width: 475px) {
+  h1 {
+    font-family: "Ice Mirror in Winter Kei", sans-serif;
+    color: white !important;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px !important;
+  }
+  
+  .moveDown {
+    position: fixed !important;
+    bottom:0px !important;
+    padding: 10px !important;
+    width: 100%;
+  }
+
+ .hide1{
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: -100px !important;
+ }
+
+  #answerQuiz{
+    display: block !important;
+    margin-bottom: -30px !important;
+    /* padding: 0px 10px; */
+  }
+
+  #answerQuiz>.brder2{
+    width: 100% !important;
+  }
+  #answerQuiz1>.brder2{
+    width: 100% !important;
+  }
+  #answerQuiz1{
+    display: block !important;
+  }
+  .brder3  {
+    width: 100% !important;
+  }
+  .brder {
+    box-shadow: 2px 2px 12px 2px black;
+    border-radius: 14px;
+    background-color: rgba(0, 45, 143, 0.67);
+    border: 1px solid white;
+    height: 50px;
+    width: 200px;
+    position: relative;
+    top: 200px;
+    left: 0px;
+  }
+  .brder4 {
+    position: absolute;
+    top: 170px;
+    box-shadow: 2px 2px 12px 2px black;
+    border-radius: 100%;
+    background-color: rgba(0, 45, 143, 0.67);
+    height: 80px;
+    width: 80px;
+    border: 2px solid goldenrod;
+    /* border: 2px solid white; */
+  }
+}

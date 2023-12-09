@@ -201,7 +201,7 @@ const updateReward = (amount) => {
     correctAnswersCount++;
   }
 
-  if (reward >= 500) { // Check if the reward is greater than or equal to $500
+  if (reward >= 500 * currentLevel) { // Check if the reward is greater than or equal to $500
     pauseTimer();
     document.getElementById("disappear").style.display = "none";
     currentLevel++;
@@ -383,3 +383,5 @@ function createChart() {
 
 
 
+
+``
